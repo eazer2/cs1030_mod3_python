@@ -1,17 +1,34 @@
-import random
+from random import randint
 
-number = random.randint(0,100)
+player = input('rock (r), paper (p), scissors (s)?')
 
-print("Guess the magic number between 0 and 100")
+print(player,'vs')
 
-guess = -1
+chosen = randint(1,3)
+print(chosen) 
 
-while guess != number:
-    guess = int(input("\nEnter your guess:"))
+if(chosen == 1):
+    computer == 'r'
 
-    if guess == number:
-        print(f"Yes, the number is {number}")
-    elif guess > number:
-        print("Your number guess is too high")
-    else:
-        print("Your guess is too low")
+elif(chosen == 2):
+    computer =='p'
+
+else:
+    computer =='s'
+
+print(computer)
+
+if(player == computer):
+    print('DRAW!')
+elif(player == 'r' and computer == 's'):
+    print('Player WINS!')
+elif(player == 'r' and computer == 'p'):
+    print('Computer WINS!')
+elif(player == 'p' and computer == 'r'):
+    print("Player WINS!")
+elif(player == 'p' and computer == 's'):
+    print('Computer WINS!')
+elif(player == 's' and computer == 'p'):
+    print('Player WINS!')
+elif(player == 's' and computer == 'r'):
+    print('Computer WINS!')
